@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dulces Tortas Nelita</title>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="images/logo dulces tortas nelita.png" alt="Dulces Tortas Nelita" class="logo" />
+        </div>
+        <div class="contact-info">
+            <span class="phone"><i class="fas fa-phone-alt"></i> 928 838 805</span>
+            <span class="address"><i class="fas fa-map-marker-alt"></i> Calle Orus 1077, SMP</span>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> <!-- Icono de menú -->
+        </div>
+        <nav id="navbar" class="hidden">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#clases">Clases de Tortas</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/Aprende a decorar.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/cupcakes y packs.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/aprende ede nelita.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/tortas de halloween tematicas en lima peru.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <div class="filtros">
+            <button onclick="filterProducts('bodas')">Tortas para Bodas</button>
+            <button onclick="filterProducts('muñecos')">Muñecos de Tortas</button>
+            <button onclick="filterProducts('cumpleaños')">Tortas para Cumpleaños</button>
+            <button onclick="filterProducts('promociones')">Paquetes y Promociones</button>
+        </div>
+        <div class="productos" id="productos">
+            <!-- Aquí se agregarán los productos -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Para los iconos -->
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
+

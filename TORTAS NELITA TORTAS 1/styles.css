@@ -1,0 +1,173 @@
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8; /* Color de fondo */
+  padding: 10px 20px; /* Espaciado */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.logo-container {
+  max-width: 80px; /* Tamaño máximo del contenedor del logo */
+  overflow: hidden; /* Oculta cualquier parte que sobresalga */
+}
+
+.logo {
+  width: 100%; /* Toma el 100% del contenedor */
+  height: auto; /* Mantiene la proporción del logo */
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info span {
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+/* Icono del menú */
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px; /* Tamaño del icono del menú */
+  display: none; /* Ocultamos inicialmente en pantallas grandes */
+}
+
+/* Estilo del menú */
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style-type: none; /* Sin viñetas */
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px; /* Espaciado entre enlaces */
+}
+
+nav ul li a {
+  text-decoration: none; /* Sin subrayado */
+  color: #333; /* Color del texto */
+  font-weight: bold;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: 700px; /* Altura máxima del slideshow */
+  margin: auto;
+  overflow: hidden; /* Oculta las imágenes que sobresalgan */
+}
+
+/* Oculta las imágenes por defecto */
+.mySlides {
+  display: none;
+}
+
+/* Estilo de las imágenes */
+img {
+  width: 100%;
+  height: 700px; /* Altura del slideshow */
+  object-fit: cover; /* Mantiene la relación de aspecto */
+}
+
+/* Botones de navegación */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro al pasar el mouse */
+}
+
+/* Catálogo */
+.catalogo {
+  padding: 20px;
+}
+
+.catalogo h2 {
+  text-align: center;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filtros button {
+  margin: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Productos */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.producto {
+  width: 200px;
+  height:auto;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #ccc; /* Borde para los productos */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Muestra el icono del menú en pantallas pequeñas */
+  }
+  
+  nav {
+    display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+    flex-direction: column; /* Cambia a columna para el menú */
+  }
+  
+  nav.hidden {
+    display: none; /* Asegura que el menú esté oculto cuando la clase 'hidden' está presente */
+  }
+  
+  nav ul {
+    flex-direction: column; /* Cambia la dirección de la lista a columna */
+    align-items: center; /* Centra los enlaces en el menú */
+  }
+  
+  nav ul li {
+    margin: 10px 0; /* Espaciado vertical en los enlaces del menú */
+  }
+}
